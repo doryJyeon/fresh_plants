@@ -1,0 +1,30 @@
+.logo {
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+}
+
+.ul {
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+}
+
+.ul > li {
+  width: 100%;
+  height: 35px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 40px;
+  border-bottom: 1px solid var(--border-color);
+  transition: all .3s linear;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--success);
+    transform: scale(1.03);
+  }
+  &:active {
+    color: var(--point-light);
+  }
+}
