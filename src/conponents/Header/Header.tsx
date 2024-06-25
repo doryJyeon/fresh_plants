@@ -8,12 +8,14 @@ import { FaBoxes, FaShoppingCart } from "react-icons/fa";
 const Header = () => {
   return (
     <header>
-      <Image
-        src={headerLogo}
-        alt="fresh plants logo"
-        priority
-        className={styles.logo}
-      />
+      <Link href={"/"}>
+        <Image
+          src={headerLogo}
+          alt="fresh plants logo"
+          priority
+          className={styles.logo}
+        />
+      </Link>
 
       <SearchBox id="headerSearch" />
 

@@ -2,6 +2,7 @@ import Image from "next/image";
 import style from "./page.module.css";
 import logo from "/public/images/logos/logo_icon.png";
 import { FaBoxes, FaCaretRight, FaShoppingCart } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,16 +18,16 @@ export default function Home() {
         <p>입니다!</p>
 
         <div className={style.card_box}>
-          <a className={style.card}>
+          <Link className={style.card} href={"/list"}>
             <FaBoxes className={style.icon__boxs} />
             <p>모든 제품</p>
             <button>보러가기<FaCaretRight /></button>
-          </a>
-          <a className={style.card}>
+          </Link>
+          <Link className={style.card} href={"/cart"}>
             <FaShoppingCart className={style.icon__cart} />
             <p>장바구니</p>
             <button>보러가기<FaCaretRight /></button>
-          </a>
+          </Link>
         </div>
       </section>
     </main >
