@@ -3,7 +3,7 @@
 :root {
   --bg: #cbf8f2;
   --header-bg: #fff;
-  --content-bg: #ffffff99;
+  --content-bg: #ffffffab;
 
   --font-color: #333;
   --font-light: #666;
@@ -15,6 +15,7 @@
   --danger: #ff4d4f;
   --warning: #faad14;
   --dark: #000;
+  --light-dark: #999999aa;
 
   --point-light: #abe54d;
   --point-dark: #4a9924;
@@ -89,6 +90,7 @@ body {
 body.dark {
   --bg: #262626;
   --header-bg: #494949;
+  --content-bg: #ffffff60;
 
   --font-color: #f1f1f1;
   --font-light: #bbb;

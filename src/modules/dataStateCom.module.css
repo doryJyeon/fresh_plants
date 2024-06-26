@@ -1,0 +1,21 @@
+.state_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > p {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--font-light);
+    margin-bottom: 30px;
+    text-align: center;
+
+    & > svg {
+      font-size: 10rem;
+      margin-bottom: 20px;
+      color: var(--light-dark);
+    }
+  }
+}
