@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap');
+
 :root {
   --bg: #cbf8f2;
   --header-bg: #fff;
@@ -25,6 +27,11 @@
 
 button {
   outline: none;
+  font-family: "Noto Serif KR", serif;
+}
+
+input {
+  font-family: "Noto Serif KR", serif;
 }
 
 a, a:visited, a:hover, a:active {
