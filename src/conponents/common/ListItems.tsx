@@ -1,16 +1,27 @@
 "use client";
 
 import { PlantsDataProps } from '@/src/interfaces/plantsProps';
-import React from 'react';
+import React, { useState } from 'react';
 import style from "./../../modules/ListItems.module.css";
 import { FaCartArrowDown } from 'react-icons/fa';
 import { readStorage, updateStorage } from '@/src/utils/LocalStorage';
+import Toast from './Toast';
 
 interface Props {
   getData: PlantsDataProps
 }
 
 const ListItems: React.FC<Props> = ({ getData }) => {
+  const [toast, setToast] = useState({ show: false, message: "" });
+
+  // 토스트 메시지
+  const showToast = (message: string) => {
+    setToast({ show: true, message });
+    setTimeout(() => {
+      setToast({ show: false, message });
+    }, 1800);
+  };
+
   // 장바구니 저장
   const updateCartItem = (id: string) => {
     let cartItems = readStorage("cartItems");
@@ -26,6 +37,7 @@ const ListItems: React.FC<Props> = ({ getData }) => {
       }
     }
     updateStorage("cartItems", { ...cartItems });
+    showToast("장바구니에 추가했습니다.");
   }
 
   return (
@@ -41,6 +53,8 @@ const ListItems: React.FC<Props> = ({ getData }) => {
           <button className={style.card__btn} onClick={() => updateCartItem(`${key}`)}><FaCartArrowDown /></button>
         </article>
       ))}
+
+      <Toast message={toast.message} show={toast.show} />
     </>
   );
 }

@@ -1,0 +1,21 @@
+.toast {
+  min-width: 200px;
+  padding: 15px 30px;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 8px;
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  bottom: 20%;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s linear;
+
+  &.show {
+    visibility: visible;
+    opacity: .85;
+  }
+}
