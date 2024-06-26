@@ -3,13 +3,14 @@
 import { useEffect, useState } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import style from "./darkMode.module.css";
+import { readStorage, updateStorage } from '@/src/utils/LocalStorage';
 
 const DarkModeBtn = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   // 이전에 다크 모드였는지 체크
   useEffect(() => {
-    const savedMode = localStorage.getItem("theme");
+    const savedMode = readStorage("thema");
     if (savedMode) {
       setDarkMode(savedMode === "dark");
     }
@@ -17,7 +18,7 @@ const DarkModeBtn = () => {
 
   useEffect(() => {
     document.body.classList.toggle("dark", darkMode);
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
+    updateStorage("thema", darkMode ? "dark" : "light");
   }, [darkMode]);
 
   return (
