@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif_KR } from "next/font/google";
 import "./globals.css";
-import Header from "../src/conponents/Header/Header";
-import Footer from "../src/conponents/Footer/Footer";
+import Menu from "./Menu";
 
 const notoSerifKR = Noto_Serif_KR({ subsets: ["latin"], weight: ["400", "500", "600", "700", "900"] });
 
@@ -22,10 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={notoSerifKR.className}>
-        <section className="header__footer">
-          <Header />
-          <Footer />
-        </section>
+        <Menu />
 
         <div className="contents">
           <section className="content__section">

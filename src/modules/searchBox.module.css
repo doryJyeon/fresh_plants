@@ -15,6 +15,9 @@
   padding: 0 10px;
   background-color: transparent;
 }
+.search_box > input[type="text"]::placeholder {
+  color: var(--border-color);
+}
 
 .search_box > button {
   position: absolute;

@@ -21,7 +21,7 @@
   bottom: 0;
   width: calc(100% - 50px);
   height: calc(100vh - 20px - 60px);
-  background-color: #ffffff90;
+  background-color: var(--main-bg);
   border-radius: 6px;
   padding: 30px 25px;
   text-align: center;
@@ -102,7 +102,6 @@
   & > p {
     font-size: 2.1rem;
     color: var(--font-color);
-    margin-top: 12px;
   }
 
   & > button {
@@ -117,5 +116,49 @@
 
   .icon__cart {
     color: var(--danger);
+  }
+}
+
+@media (max-width: 780px) {
+  /* logo img */
+  .main > img {
+    width: 180px;
+    margin-top: 100px;
+  }
+  
+  .main > p {
+    font-size: 1.5rem;
+  }
+  
+  .main > h2 > span {
+    font-size: 3.5rem;
+  }
+    
+  .card_box {
+    gap: 30px;
+  }
+  
+  .card {
+    width: 50%;
+    min-width: 100px;
+    height: 160px;
+  }
+  
+  .card > svg {
+    font-size: 3rem;
+  }
+  
+  .card > p {
+    font-size: 1.8rem;
+  }
+  
+  .card > button {
+    padding: 6px 15px;
+  }
+  
+  .card:hover {
+    & > p {
+      font-size: 2rem;
+    }
   }
 }

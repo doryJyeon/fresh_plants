@@ -79,3 +79,62 @@
   }
 }
 
+
+@media (max-width: 1024px) {
+  .card {
+    width: 150px;
+    height: 225px;
+
+    & > .card__img {
+      height: 160px;
+    }
+  
+    & > h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+  
+    & > p {
+      font-size: 1.3rem;
+    }
+  
+    & > button {
+      width: 40px;
+      height: 30px;
+      font-size: 1.8rem;
+    }
+  }
+  
+  .card:hover {
+    & > button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .cards {
+    gap: 20px;
+  }
+
+  .card {
+    width: 45%;
+    height: auto;
+    padding: 10px 10px 60px;
+    box-sizing: border-box;
+
+    & > .card__img {
+      height: 44vw;
+    }
+
+    & > h3 {
+      font-size: 1.4rem;
+    }
+
+    & > p {
+      font-size: 1.2rem;
+    }
+  }
+}

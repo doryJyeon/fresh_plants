@@ -19,3 +19,13 @@
     opacity: .85;
   }
 }
+
+@media (max-width: 1024px) {
+  .toast {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    left: 50%;
+    margin-left: -120px;
+  }
+}
