@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import style from "./darkMode.module.css";
-import { readStorage, updateStorage } from '@/src/utils/LocalStorage';
+import { readStorage, updateStorage } from '@/app/utils/LocalStorage';
 
 const DarkModeBtn = () => {
   const [darkMode, setDarkMode] = useState(false);

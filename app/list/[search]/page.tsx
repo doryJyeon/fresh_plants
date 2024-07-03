@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { PlantsData } from '@/src/data/PlantsData';
-import ListItems from '@/src/conponents/common/ListItems';
-import { PlantsDataProps } from '@/src/interfaces/plantsProps';
+import { PlantsData } from '@/app/data/PlantsData';
+import ListItems from '@/app/conponents/common/ListItems';
+import { PlantsDataProps } from '@/app/interfaces/plantsProps';
 import { useParams } from 'next/navigation';
-import DataStateCom from '@/src/conponents/common/DataStateCom';
+import DataStateCom from '@/app/conponents/common/DataStateCom';
 
 const SearchPage = () => {
   const params = useParams();

@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import style from "./page.module.css";
 import { FaMinus, FaPlus, FaTrashAlt } from 'react-icons/fa';
-import { readStorage, updateStorage } from '@/src/utils/LocalStorage';
-import { CartStoragePtops } from '@/src/interfaces/cartStorageProps';
+import { readStorage, updateStorage } from '@/app/utils/LocalStorage';
+import { CartStoragePtops } from '@/app/interfaces/cartStorageProps';
 
 const CartPage = () => {
   const [cartItems, setItems] = useState<CartStoragePtops>(readStorage("cartItems"));

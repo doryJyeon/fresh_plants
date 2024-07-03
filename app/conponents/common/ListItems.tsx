@@ -1,10 +1,10 @@
 "use client";
 
-import { PlantsDataProps } from '@/src/interfaces/plantsProps';
+import { PlantsDataProps } from '@/app/interfaces/plantsProps';
 import React, { useState } from 'react';
 import style from "./../../modules/ListItems.module.css";
 import { FaCartArrowDown } from 'react-icons/fa';
-import { readStorage, updateStorage } from '@/src/utils/LocalStorage';
+import { readStorage, updateStorage } from '@/app/utils/LocalStorage';
 import Toast from './Toast';
 
 interface Props {

@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./page.module.css";
-import { PlantsData } from '@/src/data/PlantsData';
-import ListItems from '@/src/conponents/common/ListItems';
+import { PlantsData } from '@/app/data/PlantsData';
+import ListItems from '@/app/conponents/common/ListItems';
 
 const ListPage = () => {
   return (

@@ -1,4 +1,4 @@
-import SearchBox from "@/src/conponents/common/SearchBox";
+import SearchBox from "@/app/conponents/common/SearchBox";
 import style from "./page.module.css";
 
 export default function RootLayout({
