@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "@app/modules/toast.module.css";
+import style from "@/app/modules/toast.module.css";
 
 interface Props {
   message: string
