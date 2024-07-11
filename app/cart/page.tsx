@@ -38,7 +38,7 @@ const CartPage = () => {
   useEffect(() => {
     let addPrice = 0;
 
-    Object.values(cartItems).forEach(items => {
+    cartItems && Object.values(cartItems).forEach(items => {
       addPrice += (items.price * items.count);
     })
     setTotalPrice(addPrice);
@@ -63,7 +63,7 @@ const CartPage = () => {
           </tr>
         </thead>
         <tbody>
-          {Object.entries(cartItems).map(([key, items], index) => (
+          {cartItems && Object.entries(cartItems).map(([key, items], index) => (
             <tr key={index}>
               <td>{index + 1}</td>
               <td>{items.name}</td>
