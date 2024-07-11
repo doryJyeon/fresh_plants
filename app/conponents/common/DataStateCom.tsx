@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "@/modules/dataStateCom.module.css";
+import style from "@/app/modules/dataStateCom.module.css";
 import { FaFaceSadTear } from 'react-icons/fa6';
 
 interface Props {
