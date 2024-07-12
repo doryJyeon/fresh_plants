@@ -2,7 +2,7 @@
 
 import { PlantsDataProps } from '@/app/interfaces/plantsProps';
 import React, { useState } from 'react';
-import style from "@/app/modules/ListItems.module.css";
+import style from "@/app/modules/listItems.module.css";
 import { FaCartArrowDown } from 'react-icons/fa';
 import { readStorage, updateStorage } from '@/app/utils/LocalStorage';
 import Toast from './Toast';
