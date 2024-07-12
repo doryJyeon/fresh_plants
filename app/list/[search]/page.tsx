@@ -6,6 +6,7 @@ import ListItems from '@/app/conponents/common/ListItems';
 import { PlantsDataProps } from '@/app/interfaces/plantsProps';
 import { useParams } from 'next/navigation';
 import DataStateCom from '@/app/conponents/common/DataStateCom';
+import style from "./../page.module.css";
 
 const SearchPage = () => {
   const params = useParams();
@@ -36,10 +37,10 @@ const SearchPage = () => {
   }, [search]);
 
   return (
-    <>
+    <div className={style.cards}>
       {state !== "" && <DataStateCom state={state} noDataMent={'검색된 식물이 없습니다.'} />}
       {state === "" && <ListItems getData={datas} />}
-    </>
+    </div>
   );
 }
 

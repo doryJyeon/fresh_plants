@@ -1,7 +1,7 @@
 "use client";
 
 import { PlantsDataProps } from '@/app/interfaces/plantsProps';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from "@/app/modules/listItems.module.css";
 import { FaCartArrowDown } from 'react-icons/fa';
 import { readStorage, updateStorage } from '@/app/utils/LocalStorage';
@@ -13,6 +13,7 @@ interface Props {
 
 const ListItems: React.FC<Props> = ({ getData }) => {
   const [toast, setToast] = useState({ show: false, message: "" });
+  const [cartItems, setCartItems] = useState(readStorage("cartItems") || {});
 
   // 토스트 메시지
   const showToast = (message: string) => {
@@ -22,22 +23,32 @@ const ListItems: React.FC<Props> = ({ getData }) => {
     }, 1800);
   };
 
+  useEffect(() => {
+    updateStorage("cartItems", cartItems);
+    showToast("장바구니에 추가했습니다.");
+  }, [cartItems]);
+
   // 장바구니 저장
   const updateCartItem = (id: string) => {
-    let cartItems = readStorage("cartItems");
-
     // 기존에 아이템 있는지 체크
     if (cartItems && cartItems[id]) {
-      cartItems[id] = { ...cartItems[id], count: cartItems[id].count + 1 };
+      setCartItems({
+        ...cartItems,
+        [id]: {
+          ...cartItems[id],
+          count: cartItems[id].count + 1
+        }
+      })
     } else {
-      cartItems[id] = {
-        name: getData[id].name,
-        price: getData[id].price,
-        count: 1
-      }
+      setCartItems({
+        ...cartItems,
+        [id]: {
+          name: getData[id].name,
+          price: getData[id].price,
+          count: 1
+        }
+      })
     }
-    updateStorage("cartItems", { ...cartItems });
-    showToast("장바구니에 추가했습니다.");
   }
 
   return (
