@@ -24,8 +24,8 @@ const ListItems: React.FC<Props> = ({ getData }) => {
   };
 
   useEffect(() => {
-
-  }, []);
+    updateStorage("cartItems", cartItems);
+  }, [cartItems]);
 
   // 장바구니 저장
   const updateCartItem = (id: string) => {
@@ -49,7 +49,6 @@ const ListItems: React.FC<Props> = ({ getData }) => {
       })
     }
 
-    updateStorage("cartItems", cartItems);
     showToast("장바구니에 추가했습니다.");
   }
 
