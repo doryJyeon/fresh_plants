@@ -1,5 +1,5 @@
 # Fresh plants (식물 쇼핑몰)
-Next14
+Next14<br/>
 Web / Tablet / mobile 가능
 
 ## 구현 이미지
