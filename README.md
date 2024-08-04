@@ -11,5 +11,5 @@ Web / Tablet / mobile 가능
 테마 변경 버튼으로 밝음/어두움 테마를 설정 할 수 있습니다.
 
 ### mobile
-![mobile](https://github.com/user-attachments/assets/59ad3583-2142-45dd-bfa2-e2296591af77)
+![mobile](https://github.com/user-attachments/assets/59ad3583-2142-45dd-bfa2-e2296591af77)<br/>
 모바일 버전에서는 오른쪽 위 햄버거 아이콘을 터치해 메뉴를 확인 할 수 있습니다.
