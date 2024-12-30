@@ -1,8 +1,8 @@
 # Fresh plants (식물 쇼핑몰)
 
-[사이트 이동](https://jyeon-fresh-plants.vercel.app/)
+[구현 사이트 이동](https://jyeon-fresh-plants.vercel.app/)
 
-Next14<br/>
+Next14  
 Web / Tablet / mobile 가능
 
 ## 구현 이미지
@@ -16,3 +16,13 @@ Web / Tablet / mobile 가능
 ### mobile
 ![mobile](https://github.com/user-attachments/assets/59ad3583-2142-45dd-bfa2-e2296591af77)<br/>
 모바일 버전에서는 오른쪽 위 햄버거 아이콘을 터치해 메뉴를 확인 할 수 있습니다.
+
+## 실행 방법
+```
+// npm install
+npm i
+npm run dev
+
+// localhost 접속
+localhost:3000
+```
